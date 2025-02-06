@@ -14,7 +14,7 @@ body {
     /* падинг 15+15 30, общая длина 900  */
     margin: 0 auto;
     padding: 0 15px;
-    height: 100px;
+    height: auto;
 }
 
 
@@ -52,7 +52,6 @@ body {
 .hiro {
     padding: 120px 0;
     background: url("../pictures/rectangle.jpeg") 10% 50% / cover no-repeat;
-    height: 500px;
 }
 
 .hiro-title {
@@ -121,7 +120,6 @@ body {
 /* ========================================================================= */
 .cards {
     padding: 120px 0;
-    height: 808px;
 }
 
 .cards-title {
