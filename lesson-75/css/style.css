@@ -1,0 +1,74 @@
+body {
+    background: #362844;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    padding: 50px;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid {
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    border-bottom: 5px solid red;
+    min-height: 100vh;
+    
+}
+
+.item {
+    border: 5px dashed #278d27;
+    font-size: 40px;
+    padding: .8em;
+    text-align: center;
+    
+}
+/* ==================================================================== */
+.grid-1 {
+    display: grid;
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* grid-template-rows: 200px 300px; */
+    /* grid-template: 200px 300px / repeat(3, 1fr); */
+    
+    grid-template-columns: 3fr 1fr; /* 2 явные колонки */
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: 400px;
+    /* grid-auto-rows: 300px; */ 
+    grid-auto-flow: column;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template: 100px 100px / repeat(2, 2fr);
+    gap: 100px 50%;
+    justify-items: center;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template: 100px 100px / repeat(3, 2fr);
+}
+
+.grid-4__item--1 {
+    grid-column-start: 1;
+}
+.grid-4__item--2 {
+    grid-column-start: 4;
+}
+.grid-4__item--3 {
+    grid-column: 2 / 2;
+
+}
+
+
