@@ -1,4 +1,6 @@
 (function () {
+
+    //Бургер
     document.addEventListener('click', burgerInit)
 
     function burgerInit(e) {
@@ -15,6 +17,8 @@
             document.body.classList.remove('body--opened-menu')
         }
     }
+
+    // Модалка
 
     const modal = document.querySelector('.modal')
     const modalButton = document.querySelector('.about__img-button')
@@ -36,4 +40,25 @@
             document.body.classList.remove('body--opened-modal')
         }
     }
+
+    // Табы
+
+    const tabControls = document.querySelector('.tab-conrols')
+
+    tabControls.addEventListener('cliсk', toggleTab)
+
+    function toggleTab(e) {
+
+        const tabControl = e.target.closest('.tab-conrols__link')
+
+        if (!tabControl) return
+
+        e.preventDefault()
+
+        const tabContentID = tabControl.getAttribute('href')
+
+        document.querySelector(tabContentID).classList.add('tab-content--show')
+
+    }
 })()
+
