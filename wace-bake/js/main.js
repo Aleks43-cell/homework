@@ -72,9 +72,9 @@
         tabContent.classList.add('tab-content--show')
     }
 
-    
-    
-    
+
+
+
     //Аккордеон
 
     const accordionLists = document.querySelectorAll('.accordion-list');
@@ -93,7 +93,7 @@
             const accordionContent = accordionControl.nextElementSibling;
 
             if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
-                accordionOpenedItem.classList.remove('accordion-list__item--opened'); 
+                accordionOpenedItem.classList.remove('accordion-list__item--opened');
                 accordionOpenedContent.style.maxHeight = null;
             }
             accordionItem.classList.toggle('accordion-list__item--opened');
@@ -105,6 +105,38 @@
             }
 
         });
+
+    });
+
+    // Слайдер-геллерея
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 15,
+        slidesPerView: 1.5,
+
+        pagination: {
+            el: '.galery__pagination',
+            type: 'fraction',
+        },
+
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+
+        breakpoints: {
+            601: {
+                slidesPerView: 3,
+            },
+            801: {
+                spaceBetween: 32,
+            },
+            // >= 1101px
+            1101: {
+                slidesPerView: 4,
+            }
+        }
 
     });
 
