@@ -1,0 +1,70 @@
+@import "fonts.css";
+@import "reeset.css";
+@import "hero.css";
+@import "footer.css";
+@import "main.css";
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    /* background: #111; */
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #111;
+}
+
+.header__hamburger {
+    display: flex;
+    margin-right: 25px;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__item {
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 32px;
+}
+
+.nav__item:nth-child(6) {
+    margin-right: 114px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header__col-tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__basket {
+    margin-left: 20px;
+    vertical-align: super;
+}
+
