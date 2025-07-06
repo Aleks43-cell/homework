@@ -1,0 +1,29 @@
+.hero{
+    background: url("../img/decor/bg.png") 50% 100% / cover no-repeat;
+    color: #111;
+}
+.hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero__content {
+    font-weight: 400;
+    padding: 50px 0;
+    width: 100%;
+}
+.hero__title {
+    font-family: 'Montserat', sans-serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 110%;
+    margin-bottom: 30px;
+}
+
+.hero__text {
+    width: 670px;
+    font-size: 20px;
+    line-height: 140%;
+}
