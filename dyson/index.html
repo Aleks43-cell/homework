@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dosyn</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -13,16 +14,19 @@
         <header class="header">
             <div class="header__top">
                 <div class="container">
-                    <div class="header__top-inner">
-                        <div class="header__hamburger">
-                            <a class="header__hamburger-menu" href="#">
-                                <img src="img/icons/menu-hambuger.svg" alt="">
-                            </a>
+                    <div class="header__top-inner " id="header">
+                        <div class="burder__menu" id="burger">
+                            <div class="line">
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="line">
+                            </div>
                         </div>
                         <a class="header__logo" href="#">
                             <img src="img/icons/logos/logo-l.png" alt="">
                         </a>
-                        <nav class="nav">
+                        <nav class="nav__menu" id="menu">
                             <ul class="nav__list">
                                 <li class="nav__item">
                                     <a class="nav__link" href="#">
@@ -58,7 +62,7 @@
                         </nav>
                         <div class="header__col-tel">
                             <ul class="nav__list">
-                                <li class="nav__item">
+                                <li class="nav__item-tel">
                                     <a class="header__col-number" href="tel:+7 (999) 800-45-54">
                                         +7 (999) 800-45-54
                                     </a>
@@ -211,296 +215,365 @@
                     </ul>
                 </div>
                 <div class="product__tab-content">
-                    <ul class="accordion-list">
-                        <li class="accordion-list__item">
-                            <button class="accordion-list__control" type="button">
-                                <p class="accordion-list__control-title">
-                                    Сначала популярные
-                                </p>
-                                <div class="accordion-list__control-icon">
-                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.366819 1.64018C-0.175953 0.988856 0.287204 0 1.13504 0H6.86496C7.7128 0 8.17595 0.988858 7.63318 1.64018L4.76822 5.07814C4.36843 5.55789 3.63157 5.55789 3.23178 5.07813L0.366819 1.64018Z"
-                                            fill="#111111" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </li>
-                    </ul>
+                    <div class="container">
+                        <div class="accordion__list">
+                            <nav class=" list__nav">
+                                <ul class="list__ul">
+                                    <li class="list__li">
+                                        <button class="list__control" id="list">
+                                            <p class="list__control-title">
+                                                Сначала популярные
+                                            </p>
+                                            <div class="accordion-list__control-icon">
+                                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.366819 1.64018C-0.175953 0.988856 0.287204 0 1.13504 0H6.86496C7.7128 0 8.17595 0.988858 7.63318 1.64018L4.76822 5.07814C4.36843 5.55789 3.63157 5.55789 3.23178 5.07813L0.366819 1.64018Z"
+                                                        fill="#111111" />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div class="accordion__list-body" id="control">
+                                            <button class="list__control" id="col">
+                                                <p class="list__control-title">
+                                                    Сначала популярные
+                                                </p>
+                                                <div class="accordion-list__control-icon">
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                        transform="rotate(180)" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M0.366819 1.64018C-0.175953 0.988856 0.287204 0 1.13504 0H6.86496C7.7128 0 8.17595 0.988858 7.63318 1.64018L4.76822 5.07814C4.36843 5.55789 3.63157 5.55789 3.23178 5.07813L0.366819 1.64018Z"
+                                                            fill="#C5358C" />
+                                                    </svg>
+                                            </button>
+                                            <div class="list__control-name">
+                                                <button class="list__control-button" type="button">
+                                                    <p class="list__title name__title">
+                                                        Сначала популярные
+                                                    </p>
+                                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 4.5L6.5 10L15.5 1" stroke="#C5358C" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                                <button class="list__control-button" type="button">
+                                                    <p class="list__title">
+                                                        Сначала дешёвые
+                                                    </p>
+                                                </button>
+                                                <button class="list__control-button" type="button">
+                                                    <p class="list__title">
+                                                        Сначала дорогие
+                                                    </p>
+                                                </button>
+                                                <button class="list__control-button" type="button">
+                                                    <p class="list__title">
+                                                        Новинки
+                                                    </p>
+                                                </button>
+                                                <button class="list__control-button" type="button">
+                                                    <p class="list__title">
+                                                        Высокий рейтинг
+                                                    </p>
+                                                </button>
+                                            </div>
+                                            <button class="list__control" id="listing">
+                                                <p class="list__control-title">
+                                                    Сначала популярные
+                                                </p>
+                                                <div class="accordion-list__control-icon">
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M0.366819 1.64018C-0.175953 0.988856 0.287204 0 1.13504 0H6.86496C7.7128 0 8.17595 0.988858 7.63318 1.64018L4.76822 5.07814C4.36843 5.55789 3.63157 5.55789 3.23178 5.07813L0.366819 1.64018Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__slider">
-                    <div class="product__wraper">
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-1.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческами
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                        <div class="product__wraper ">
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-1.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческами
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        59 990 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        69 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    59 990 Р
-                                </span>
-                                <span class="card__span-4">
-                                    69 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-2.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic HD07 с 5 насадками и подставкой
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-2.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic HD07 с 5 насадками и подставкой
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        47 900 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        51 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    47 900 Р
-                                </span>
-                                <span class="card__span-4">
-                                    51 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-3.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-3.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        46 990 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        51 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    46 990 Р
-                                </span>
-                                <span class="card__span-4">
-                                    51 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-1.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческами
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-1.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и расческами
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        59 990 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        69 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    59 990 Р
-                                </span>
-                                <span class="card__span-4">
-                                    69 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-2.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic HD07 с 5 насадками и подставкой
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-2.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic HD07 с 5 насадками и подставкой
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        47 900 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        51 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    47 900 Р
-                                </span>
-                                <span class="card__span-4">
-                                    51 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img class="card__img" src="img/content/cards/image-3.jpg" alt="">
-                            <p class="card__text">
-                                Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
-                            </p>
-                            <div class="card__span-a">
-                                <li class="card__span-1">
-                                    <span>
-                                        В наличии
+                            <div class="product__card">
+                                <img class="card__img" src="img/content/cards/image-3.jpg" alt="">
+                                <p class="card__text">
+                                    Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения цвет сирень
+                                </p>
+                                <div class="card__span-a">
+                                    <li class="card__span-1">
+                                        <span>
+                                            В наличии
+                                        </span>
+                                        <span class="card__span-2">
+                                            -15%
+                                        </span>
+                                    </li>
+                                    <span class="card__span-3">
+                                        46 990 Р
                                     </span>
-                                    <span class="card__span-2">
-                                        -15%
+                                    <span class="card__span-4">
+                                        51 990 Р
                                     </span>
-                                </li>
-                                <span class="card__span-3">
-                                    46 990 Р
-                                </span>
-                                <span class="card__span-4">
-                                    51 990 Р
-                                </span>
+                                </div>
+                                <div class="card__button-f">
+                                    <button class="card__button-1 button" type="button">
+                                        <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 1H1" stroke="#ABABAB" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                        1
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+                                                stroke="#111111" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__button button" type="button">
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__button-f">
-                                <button class="card__button-1 button" type="button">
-                                    <svg width="20" height="2" viewBox="0 0 20 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 1H1" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                    1
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-                                            stroke="#111111" stroke-width="2" stroke-linecap="round" />
-                                    </svg>
-                                </button>
-
-                                <button class="card__button button" type="button">
-                                    В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product__nav">
-                            <button class="product__prev" type="button">
-                                <svg width="35" height="30" viewBox="0 0 35 30" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.58768 16.1698L33.3387 15.8428C33.8909 15.8367 34.3337 15.3841 34.3276 14.8318C34.3215 14.2796 33.8689 13.8368 33.3167 13.8429L3.42033 14.1715L15.0001 1.81932C15.3778 1.4164 15.3574 0.783566 14.9545 0.405844C14.5515 0.0281214 13.9187 0.048547 13.541 0.451466L0.358522 14.5133C-0.0192005 14.9162 0.00122539 15.549 0.404144 15.9268L15.1086 29.7117C15.5116 30.0894 16.1444 30.069 16.5221 29.6661C16.8998 29.2632 16.8794 28.6303 16.4765 28.2526L3.58768 16.1698Z"
-                                        fill="#111111" />
-                                </svg>
-                                <button class="product__next">
+                            <div class="product__nav">
+                                <button class="product__prev" type="button">
                                     <svg width="35" height="30" viewBox="0 0 35 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M31.4123 16.1698L1.66134 15.8428C1.10909 15.8367 0.666325 15.3841 0.672395 14.8318C0.678466 14.2796 1.13108 13.8368 1.68333 13.8429L31.5797 14.1715L19.9999 1.81932C19.6222 1.4164 19.6426 0.783566 20.0455 0.405844C20.4485 0.0281214 21.0813 0.048547 21.459 0.451466L34.6415 14.5133C35.0192 14.9162 34.9988 15.549 34.5959 15.9268L19.8914 29.7117C19.4884 30.0894 18.8556 30.069 18.4779 29.6661C18.1002 29.2632 18.1206 28.6303 18.5235 28.2526L31.4123 16.1698Z"
+                                            d="M3.58768 16.1698L33.3387 15.8428C33.8909 15.8367 34.3337 15.3841 34.3276 14.8318C34.3215 14.2796 33.8689 13.8368 33.3167 13.8429L3.42033 14.1715L15.0001 1.81932C15.3778 1.4164 15.3574 0.783566 14.9545 0.405844C14.5515 0.0281214 13.9187 0.048547 13.541 0.451466L0.358522 14.5133C-0.0192005 14.9162 0.00122539 15.549 0.404144 15.9268L15.1086 29.7117C15.5116 30.0894 16.1444 30.069 16.5221 29.6661C16.8998 29.2632 16.8794 28.6303 16.4765 28.2526L3.58768 16.1698Z"
                                             fill="#111111" />
                                     </svg>
+                                    <button class="product__next">
+                                        <svg width="35" height="30" viewBox="0 0 35 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M31.4123 16.1698L1.66134 15.8428C1.10909 15.8367 0.666325 15.3841 0.672395 14.8318C0.678466 14.2796 1.13108 13.8368 1.68333 13.8429L31.5797 14.1715L19.9999 1.81932C19.6222 1.4164 19.6426 0.783566 20.0455 0.405844C20.4485 0.0281214 21.0813 0.048547 21.459 0.451466L34.6415 14.5133C35.0192 14.9162 34.9988 15.549 34.5959 15.9268L19.8914 29.7117C19.4884 30.0894 18.8556 30.069 18.4779 29.6661C18.1002 29.2632 18.1206 28.6303 18.5235 28.2526L31.4123 16.1698Z"
+                                                fill="#111111" />
+                                        </svg>
+                                    </button>
+                                    <div class="product__paginator">
+                                        <span class="swiper-paginator-current">
+                                            1
+                                        </span>
+                                        из
+                                        <span class="swiper-paginator-total">
+                                            3
+                                        </span>
+                                    </div>
                                 </button>
-                                <div class="product__paginator">
-                                    <span class="swiper-paginator-current">
-                                        1
-                                    </span>
-                                    из
-                                    <span class="swiper-paginator-total">
-                                        3
-                                    </span>
-                                </div>
-                            </button>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </section>
             <section class="main__faq">
@@ -516,9 +589,22 @@
                                 <p class="accordion-text">
                                     Главное отличие фена Dyson в быстром и безопасном высушивании волос?
                                 </p>
-                                <button class="accordion-button">
-                                    <img src="img/icons/union.svg" alt="">
+                                <button class="accordion-button" id="button">
+                                    <div class="accordion-line horizontal"></div>
+                                    <div class="accordion-line vertical"></div>
                                 </button>
+                                <nav class="accordion__nav" id="nav">
+                                    <ul class="accordion__ul">
+                                        <li class="accordion__li">
+                                            Главное отличие фена Dyson в быстром и безопасном высушивании волос. В
+                                            рукоятку встроен датчик температуры, благодаря которому она не поднимается
+                                            выше 100 градусов. В комплекте 5 насадок, которые подходят для укладки и
+                                            сушки на разных режимах. Есть практичный черный чехол, предназначенный для
+                                            аккуратной перевозки и хранения. Расчески можно использовать отдельно от
+                                            девайса или во время сушки с целью предотвратить запутывание.
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                             <div class="accordion-content">
                                 <p class="accordion-text">
@@ -568,76 +654,91 @@
             </section>
             <section class="main__set">
                 <div class="container">
-                    <div class="set__title">
-                        <p class="set__title-text">
-                            Комплектация
-                        </p>
-                    </div>
-                    <div class="set__slider">
-                        <div class="set__nav">
-                            <div class="set__button">
-                                <button class="set__prev" type="button">
-                                    <img src="img/icons/left.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="set__wraper">
-                                <div class="set__wraper-slider">
-                                    <div class="set__wraper-body">
-                                        <img src="img/content/koplect/image-1.jpg" alt="">
-                                    </div>
-                                    <div class="set__wraper-name">
-                                        Жесткая щетка для выпрямления
-                                    </div>
-                                    <div class="set__wraper-text">
-                                        Главное отличие фена Dyson в быстром и безопасном высушивании волос.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="set__wraper">
-                                <div class="set__wraper-slider">
-                                    <div class="set__wraper-body">
-                                        <img src="img/content/koplect/image-2.jpg" alt="">
-                                    </div>
-                                    <div class="set__wraper-name">
-                                        Круглая щетка для создания объема
-                                    </div>
-                                    <div class="set__wraper-text">
-                                        Главное отличие фена Dyson в быстром и безопасном высушивании волос.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="set__wraper">
-                                <div class="set__wraper-slider">
-                                    <div class="set__wraper-body">
-                                        <img src="img/content/koplect/image-3.jpg" alt="">
-                                    </div>
-                                    <div class="set__wraper-name">
-                                        Насадка для сушки волос перед укладкой
-                                    </div>
-                                    <div class="set__wraper-text">
-                                        Главное отличие фена Dyson в быстром и безопасном высушивании волос.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="set__wraper">
-                                <div class="set__wraper-slider">
-                                    <div class="set__wraper-body">
-                                        <img src="img/content/koplect/image-4.jpg" alt="">
-                                    </div>
-                                    <div class="set__wraper-name">
-                                        30-мм цилиндрические насадки
-                                    </div>
-                                    <div class="set__wraper-text">
-                                        Главное отличие фена Dyson в быстром и безопасном высушивании волос.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="set__button">
-                                <button class="set__next" type="button">
-                                    <img src="img/icons/right.svg" alt="">
-                                </button>
+                    <div class="set__inner">
+                        <div class="set__content">
+                            <div class="set__info">
+                                <p class="set__text">
+                                    Комплектация
+                                </p>
                             </div>
                         </div>
+                    </div>
+                    <div class="set__slider swiper">
+                        <div class="set__wraper swiper-wrapper">
+                            <div class="set__slide swiper-slide">
+                                <div class="set__slide-img">
+                                    <img src="img/content/koplect/image-1.jpg" alt="">
+                                </div>
+                                <div class="set__slide-name">
+                                    Жесткая щетка для выпрямления
+                                </div>
+                                <div class="set__slide-text">
+                                    Главное отличие фена Dyson в быстром и безопасном высушивании волос.
+                                </div>
+                            </div>
+                            <div class="set__slide swiper-slide">
+                                <div class="set__slide-img">
+                                    <img src="img/content/koplect/image-2.jpg" alt="">
+                                </div>
+                                <div class="set__slide-name">
+                                    Круглая щетка для создания объема
+                                </div>
+                                <div class="set__slide-text">
+                                    Главное отличие фена Dyson в быстром и безопасном высушивании волос.
+                                </div>
+                            </div>
+                            <div class="set__slide swiper-slide">
+                                <div class="set__slide-img">
+                                    <img src="img/content/koplect/image-3.jpg" alt="">
+                                </div>
+                                <div class="set__slide-name">
+                                    Насадка для сушки волос перед укладкой
+                                </div>
+                                <div class="set__slide-text">
+                                    Главное отличие фена Dyson в быстром и безопасном высушивании волос.
+                                </div>
+                            </div>
+                            <div class="set__slide swiper-slide">
+                                <div class="set__slide-img">
+                                    <img src="img/content/koplect/image-4.jpg" alt="">
+                                </div>
+                                <div class="set__slide-name">
+                                    30-мм цилиндрические насадки
+                                </div>
+                                <div class="set__slide-text">
+                                    Главное отличие фена Dyson в быстром и безопасном высушивании волос.
+                                </div>
+                            </div>
+                            <div class="set__slide swiper-slide">
+                                <div class="set__slide-img">
+                                    <img src="img/content/koplect/image-3.jpg" alt="">
+                                </div>
+                                <div class="set__slide-name">
+                                    Насадка для сушки волос перед укладкой
+                                </div>
+                                <div class="set__slide-text">
+                                    Главное отличие фена Dyson в быстром и безопасном высушивании волос.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="set__nav">
+                        <button class="set__prev" type="button">
+                            <svg width="35" height="30" viewBox="0 0 35 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.58768 16.1698L33.3387 15.8428C33.8909 15.8367 34.3337 15.3841 34.3276 14.8318C34.3215 14.2796 33.8689 13.8368 33.3167 13.8429L3.42033 14.1715L15.0001 1.81932C15.3778 1.4164 15.3574 0.783566 14.9545 0.405844C14.5515 0.0281214 13.9187 0.048547 13.541 0.451466L0.358522 14.5133C-0.0192005 14.9162 0.00122539 15.549 0.404144 15.9268L15.1086 29.7117C15.5116 30.0894 16.1444 30.069 16.5221 29.6661C16.8998 29.2632 16.8794 28.6303 16.4765 28.2526L3.58768 16.1698Z"
+                                    fill="#111111" />
+                            </svg>
+                        </button>
+                        <button class="set__next" type="button">
+                            <svg width="35" height="30" viewBox="0 0 35 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M31.4123 16.1698L1.66134 15.8428C1.10909 15.8367 0.666325 15.3841 0.672395 14.8318C0.678466 14.2796 1.13108 13.8368 1.68333 13.8429L31.5797 14.1715L19.9999 1.81932C19.6222 1.4164 19.6426 0.783566 20.0455 0.405844C20.4485 0.0281214 21.0813 0.048547 21.459 0.451466L34.6415 14.5133C35.0192 14.9162 34.9988 15.549 34.5959 15.9268L19.8914 29.7117C19.4884 30.0894 18.8556 30.069 18.4779 29.6661C18.1002 29.2632 18.1206 28.6303 18.5235 28.2526L31.4123 16.1698Z"
+                                    fill="#111111" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -762,7 +863,6 @@
                     </div>
                 </div>
             </section>
-
         </main>
         <footer class="footer">
             <div class="container">
@@ -936,6 +1036,10 @@
             </div>
         </footer>
     </div>
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+
 </body>
 
 </html>

@@ -21,6 +21,7 @@
 }
 
 .footer__col-item {
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
 .footer__col-item:nth-child(8) {
